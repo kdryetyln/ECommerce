@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Eticaret.Common.Models.Hotel.ReservationDto>
+
+
+<html>
+<head>
+    <title>About us</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travello template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/about_responsive.css">
+    <link href="~/Template/styles/about.css" rel="stylesheet" />
+    <link href="~/Template/styles/component.min.css" rel="stylesheet" />
+    <style>
+        .portlet.box.green {
+            border: 1px solid #3f515b;
+            border-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <!-- Milestone -->
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img src="/Template/images/mountain.svg" alt=""></div>
+                    <div class="milestone_counter" data-end-value="@Model.Count()">0</div>
+                    <div class="milestone_text">Reservations</div>
+                </div>
+            </div>
+
+            <!-- Milestone -->
+            <div class="col-lg-9 milestone_col" style="margin-top:-50px">
+                <div class="portlet box green">
+                    <div class="portlet-title" style="background-color:#3f515b;border-radius:3px">
+                        <div class="caption">
+                            <i class="fa fa-list"></i>Reservation Requests
+                        </div>
+
+                    </div>
+                    <div class="portlet-body flip-scroll" style="overflow-y: scroll;height: 500px;">
+                        <table class="table table-bordered table-striped table-condensed flip-content">
+                            <thead class="flip-content">
+                                <tr>
+                                    <th style="text-align:center">Room</th>
+                                    <th style="text-align:center">Room Number</th>
+                                    <th style="text-align:center">Full Name</th>
+                                    <th style="text-align:center">E-mail</th>
+                                    <th style="text-align:center">Check-in</th>
+                                    <th style="text-align:center">Check-ot</th>
+                                    <th style="text-align:center">Approve</th>
+                                    <th style="text-align:center">Reject</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td style="text-align:center;padding-top:4%">
+                                            <img class="d-block w-100" src="/Content/images/@item.Title" width="50px" height="50px" alt="First slide">
+                                        </td>
+                                        <td style="text-align:center;padding-top:4%">@item.RoomId</td>
+                                        <td style="text-align:center;padding-top:4%">@item.Name</td>
+                                        <td style="text-align:center;padding-top:4%">@item.Email</td>
+                                        <td style="text-align:center;padding-top:4%">@item.BeginDate.Day</td>
+                                        <td style="text-align:center;padding-top:4%">@item.EndDate.Date</td>
+                                        <td>
+                                            <form action="/Home/Approve/@item.Id" method="post">
+                                                <button type="submit" class="btn btn-success circle" style="margin-left:20%;margin-top:14%;border-radius:50%;cursor:pointer"><span class="fa fa-check"></span></button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form action="/Home/Reject/@item.Id" method="post">
+                                                <button type="submit" class="btn btn-danger circle" style="margin-left:20%;margin-top:14%;border-radius:50%;cursor:pointer"><span class="fa fa-minus"></span></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/styles/bootstrap4/popper.js"></script>
+    <script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Template/plugins/greensock/TweenMax.min.js"></script>
+    <script src="~/Template/plugins/greensock/TimelineMax.min.js"></script>
+    <script src="~/Template/plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="~/Template/plugins/greensock/animation.gsap.min.js"></script>
+    <script src="~/Template/plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Template/plugins/easing/easing.js"></script>
+    <script src="~/Template/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/Template/js/about.js"></script>
+</body>
+</html>
+
+    

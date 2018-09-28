@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travello</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travello template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/responsive.css">
+    <!-- Website CSS style -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        /*
+        /* Created by Filipe Pina
+         * Specific styles of signin, register, component
+         */
+        /*
+         * General styles
+         */
+        #playground-container {
+            height: 500px;
+            overflow: hidden !important;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body, html {
+            height: 100%;
+            background-repeat: no-repeat;
+            background: url(/Template/images/home_slider.jpg);
+            font-family: 'Oxygen', sans-serif;
+            background-size: cover;
+        }
+        span.input-group-addon i {
+            color: #155986 !important;
+            font-size: 17px;
+        }
+
+        .main {
+            margin: 50px 15px;
+        }
+
+        h1.title {
+            font-size: 50px;
+            font-family: 'Passion One', cursive;
+            font-weight: 400;
+        }
+
+        hr {
+            width: 10%;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-bottom: 15px;
+            font: bold;
+        }
+
+        input,
+        input::-webkit-input-placeholder {
+            font-size: 13px;
+            padding-top: 3px;
+        }
+
+        .main-login {
+            background-color: #fff;
+            /* shadows and rounded borders */
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-control {
+            height: auto !important;
+            padding: 8px 12px !important;
+        }
+
+        .input-group {
+            -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21) !important;
+            -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21) !important;
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21) !important;
+        }
+
+        button {
+            margin-top: 28px;
+            padding: 6px 12px;
+            background-color: #394a6a !important;
+            color: antiquewhite;
+            text-shadow: 0 1px #fff;
+            cursor: pointer;
+            -moz-border-radius: 3px 3px;
+            -webkit-border-radius: 3px 3px;
+            border-radius: 3px 3px;
+            background: #f5f5f5;
+            background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+            background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+            background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+            background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+            background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+        }
+
+        .main-center {
+            margin-top: 30px;
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 10px 40px;
+            background: transparent;
+            color: #FFF;
+            text-shadow: none;
+            -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+            -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+            box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+        }
+
+        span.input-group-addon i {
+            color: #009edf;
+            font-size: 17px;
+        }
+
+        .login-button {
+            margin-top: 5px;
+        }
+
+        .login-register {
+            font-size: 11px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="super_container">
+
+       
+        <div class="home" style="background-image:url(/Template/images/home_slider.jpg); display:block;height:1020px">
+
+            <!-- Home Slider -->
+            <div class="home_slider_container">
+                <div class="owl-carousel owl-theme home_slider">
+
+                    <!-- Slide -->
+                    <div class="owl-item">
+                        <div class="background_image" style="background-image:url(/Template/images/home_slider.jpg); display:block"></div>
+                        <div class="home_slider_content_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="home_slider_content">
+                                            <div class="container">
+                                                <div class="row main">
+                                                    <div class="main-login main-center">
+                                                        <h5>Sign up with your email address.</h5>
+                                                        <form class="" method="post" action="/Login/Register">
+
+                                                            <div class="form-group">
+                                                                <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                                                                <div class="cols-sm-10">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                                        <input type="text" class="form-control" name="Name" id="name" placeholder="Enter your Name" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                                                                <div class="cols-sm-10">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                                        <input type="text" class="form-control" name="Email" id="email" placeholder="Enter your Email" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <label for="password" class="cols-sm-2 control-label">Password</label>
+                                                                <div class="cols-sm-10">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                                        <input type="password" class="form-control" name="Password" id="password" placeholder="Enter your Password" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group ">
+                                                                @Html.ValidationSummary()
+                                                                <button type="submit" class="btn btn-lg btn-block login-button" style="background-color:#394a6a !important;">Register</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                                            <!-- Include all compiled plugins (below), or include individual files as needed -->
+                                            <script src="js/bootstrap.min.js"></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/styles/bootstrap4/popper.js"></script>
+    <script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Template/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Template/plugins/scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="~/Template/plugins/easing/easing.js"></script>
+    <script src="~/Template/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/Template/js/custom.js"></script>
+   
+</body>
+</html>

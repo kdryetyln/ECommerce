@@ -1,0 +1,674 @@
+﻿@model Eticaret.Common.Models.Hotel.HotelRoomDto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- *****************************************USERINTERFACE******************************* -->
+    <title>Travello</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travello template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/responsive.css">
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+
+        .form-control {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                            <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+                                <div class="logo"><a href="index.html">Travello</a></div>
+                                <nav class="main_nav">
+                                    <ul class="d-flex flex-row align-items-start justify-content-start">
+                                        <li class="active"><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="news.html">News</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#">@Session["name"]</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="hamburger ml-auto">
+                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_social d-flex flex-row align-items-center justify-content-start">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Menu -->
+
+        <div class="menu">
+            <div class="menu_header d-flex flex-row align-items-center justify-content-start">
+                <div class="menu_logo"><a href="index.html">Travello</a></div>
+                <div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+            </div>
+            <div class="menu_content">
+                <ul>
+                    <li><a href="inex.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">@Session["name"]</a></li>
+                </ul>
+            </div>
+            <div class="menu_social">
+                <div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Home -->
+
+        <div class="home">
+
+            <!-- Home Slider -->
+            <div class="home_slider_container">
+                <div class="owl-carousel owl-theme home_slider">
+
+                    <!-- Slide -->
+                    <div class="owl-item">
+                        <div class="background_image" style="background-image:url(/Template/images/home_slider.jpg)"></div>
+                        <div class="home_slider_content_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="home_slider_content">
+                                            <div class="home_title"><h2>Let us take you away</h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="owl-item">
+                        <div class="background_image" style="background-image:url(/Template/images/home_slider.jpg)"></div>
+                        <div class="home_slider_content_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="home_slider_content">
+                                            <div class="home_title"><h2>Let us take you away</h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide -->
+                    <div class="owl-item">
+                        <div class="background_image" style="background-image:url(/Template/images/home_slider.jpg)"></div>
+                        <div class="home_slider_content_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="home_slider_content">
+                                            <div class="home_title"><h2>Let us take you away</h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Search -->
+
+        <div class="home_search">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_search_container">
+                            <div class="home_search_title">Find Your Best Hotel</div>
+                            <div class="home_search_content" style="width: 80%;margin-left: 100px;">
+                                <form action="#" class="home_search_form" id="home_search_form">
+                                    <div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+                                        <input type="text" class="search_input search_input_1" style="width: 75%;border-radius:5px" placeholder="Search Hotel" required="required">
+                                        <button class="home_search_button">search</button>
+                                    </div>
+                                    <div class="container">
+                                        <ul id="list" style="margin-left:-13px;width: 586px;"></ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intro -->
+
+        <div class="intro">
+            <div class="intro_background" style="background-image:url(/Template/images/intro.png)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="intro_container">
+                            <div class="row">
+
+                                <!-- Intro Item -->
+                                <div class="col-lg-4 intro_col">
+                                    <div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                        <div class="intro_icon"><img src="~/Template/images/beach.svg" alt=""></div>
+                                        <div class="intro_content">
+                                            <div class="intro_title">Top Destinations</div>
+                                            <div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Intro Item -->
+                                <div class="col-lg-4 intro_col">
+                                    <div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                        <div class="intro_icon"><img src="~/Template/images/wallet.svg" alt=""></div>
+                                        <div class="intro_content">
+                                            <div class="intro_title">The Best Prices</div>
+                                            <div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Intro Item -->
+                                <div class="col-lg-4 intro_col">
+                                    <div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                        <div class="intro_icon"><img src="~/Template/images/suitcase.svg" alt=""></div>
+                                        <div class="intro_content">
+                                            <div class="intro_title">Amazing Services</div>
+                                            <div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destinations -->
+
+        <div class="destinations" id="destinations">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="section_subtitle">simply amazing places</div>
+                        <div class="section_title"><h2>@Model.HotelName</h2></div>
+                    </div>
+                </div>
+                <div class="row destinations_row">
+                    <div class="col">
+                        <div class="destinations_container item_grid">
+
+                            <!-- Destination -->
+
+                            @foreach (var room in Model.roomDtos.OrderBy(k => k.Stock))
+                            {
+                                var imageList = room.roomImageDtos.ToList();
+
+
+                                <div class="destination item">
+                                    <div class="destination_image">
+                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                @if (imageList.Count() == 1)
+                                                {
+                                                    <div class="carousel-item active">
+                                                        @{var Imagess = imageList.First().Title;}
+                                                        <img class="d-block w-100" src="http://localhost:58667/Content/images/@Imagess" width="360px" height="262px" alt="First slide">
+                                                    </div>
+
+                                                }
+                                                else if (imageList.Count() > 1)
+                                                {
+                                                    <div class="carousel-item active">
+                                                        @{var Imagess = imageList.First().Title;}
+                                                        <img class="d-block w-100" src="http://localhost:58667/Content/images/@Imagess" width="360px" height="262px" alt="First slide">
+                                                    </div>
+                                                    foreach (var item in imageList.Distinct())
+                                                    {
+                                                        <div class="carousel-item">
+                                                            @{var Images = item.Title;}
+                                                            <img class="d-block w-100" src="http://localhost:58667/Content/images/@Images" width="360px" height="262px" alt="First slide">
+                                                        </div>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <div class="carousel-item active">
+                                                        <img src="~/Template/images/destination_1.jpg" alt="">
+                                                    </div>
+                                                }
+
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="destination_content">
+                                        <div class="destination_price">
+                                            <table class="table table-bordered">
+                                                <thead style="text-align:center">
+                                                    <tr>
+                                                        <th scope="col">Type</th>
+                                                        <th scope="col">Person</th>
+                                                        <th scope="col">Floor</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="text-align:center;font-size: 13px;color: #494d50;font-weight:500">
+                                                    <tr>
+                                                        <td><span>@room.Name</span></td>
+                                                        <td><span>@room.PersonCount</span></td>
+                                                        <td><span>@room.Stock</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <label></label>
+                                        <div class="destination_subtitle">
+                                            <ul class="package-list">
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Air Conditioning</span>
+                                                    @if (room.airConditioning)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Bathroom</span>
+                                                    @if (room.Bathroom)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Wi-fi</span>
+                                                    <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Hair Dryer</span>
+                                                    @if (room.Fund)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Jakuzi</span>
+                                                    @if (room.Jakuzi)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Mini Bar</span>
+                                                    @if (room.MiniBar)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>TV</span>
+                                                    @if (room.TV)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center">
+                                                    <span>Swimming Pool</span>
+                                                    @if (room.Wifi)
+                                                    {
+                                                        <span><i class="fa fa-check" style="color:lawngreen"></i></span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span><i class="fa fa-minus" style="color:red"></i></span>
+                                                    }
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div>
+                                            <div class="destination_price pull-left" style="margin-top:7px">
+                                                Price : $ @room.Price
+
+
+                                            </div>
+
+                                            <div class="destination_price" style="margin-left:325px">
+
+                                                <a class="btn btn-success" style="border-radius:50%" onclick="GetRoomId(@room.RoomId)" data-toggle="modal" data-target="#exampleModalCenter" title="Add Reservation"><span class="fa fa-plus" style="color:aliceblue"></span> </a>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+
+        <div class="testimonials" id="testimonials">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/Template/images/testimonials.jpg" data-speed="0.8"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="section_subtitle">simply amazing places</div>
+                        <div class="section_title"><h2>Testimonials</h2></div>
+                    </div>
+                </div>
+                <div class="row testimonials_row">
+                    <div class="col">
+
+                        <!-- Testimonials Slider -->
+                        <div class="testimonials_slider_container">
+                            <div class="owl-carousel owl-theme testimonials_slider">
+
+                                <!-- Slide -->
+                                <div class="owl-item text-center">
+                                    <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+                                    <div class="testimonial_author">
+                                        <div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+                                            <div>john turner,</div>
+                                            <div>client</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide -->
+                                <div class="owl-item text-center">
+                                    <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+                                    <div class="testimonial_author">
+                                        <div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+                                            <div>john turner,</div>
+                                            <div>client</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide -->
+                                <div class="owl-item text-center">
+                                    <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+                                    <div class="testimonial_author">
+                                        <div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+                                            <div>john turner,</div>
+                                            <div>client</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test_nav">
+                <ul class="d-flex flex-column align-items-end justify-content-end">
+                    <li><a href="#">City Breaks Clients<span>01</span></a></li>
+                    <li><a href="#">Cruises Clients<span>02</span></a></li>
+                    <li><a href="#">All Inclusive Clients<span>03</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- News -->
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="~/Template/images/footer_1.jpg" data-speed="0.8"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="newsletter">
+                            <div class="newsletter_title_container text-center">
+                                <div class="newsletter_title">Subscribe to our newsletter to get the latest trends & news</div>
+                                <div class="newsletter_subtitle">Join our database NOW!</div>
+                            </div>
+                            <div class="newsletter_form_container">
+                                <form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
+                                    <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+                                        <div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+                                        <div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+                                    </div>
+                                    <div><button class="newsletter_button">subscribe</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer_contact_row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="row">
+
+                            <!-- Footer Contact Item -->
+                            <div class="col-xl-4 footer_contact_col">
+                                <div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+                                    <div class="footer_contact_icon"><img src="~/Template/images/sign.svg" alt=""></div>
+                                    <div class="footer_contact_title">give us a call</div>
+                                    <div class="footer_contact_list">
+                                        <ul>
+                                            <li>Office Landline: +44 5567 32 664 567</li>
+                                            <li>Mobile: +44 5567 89 3322 332</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer Contact Item -->
+                            <div class="col-xl-4 footer_contact_col">
+                                <div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+                                    <div class="footer_contact_icon"><img src="~/Template/images/trekking.svg" alt=""></div>
+                                    <div class="footer_contact_title">come & drop by</div>
+                                    <div class="footer_contact_list">
+                                        <ul style="max-width:190px">
+                                            <li>4124 Barnes Street, Sanford, FL 32771</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer Contact Item -->
+                            <div class="col-xl-4 footer_contact_col">
+                                <div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+                                    <div class="footer_contact_icon"><img src="~/Template/images/around.svg" alt=""></div>
+                                    <div class="footer_contact_title">send us a message</div>
+                                    <div class="footer_contact_list">
+                                        <ul>
+                                            <li>youremail@gmail.com</li>
+                                            <li>Office@yourbusinessname.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-10" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="margin-top:250px">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/Home/AddRezervation" method="post">
+                    <div class="modal-body">
+                        <div class="row">
+                            <label style="margin-left:55px">Enter Begin Date </label><label style="margin-left:145px">Enter End Date</label>
+                        </div>
+                        <div class="input-group pull-left" style="width:220px">
+
+                            <span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" placeholder="Enter Begin Date" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" name="BeginDate">
+                        </div>
+                        <div class="input-group pull-right" style="width:220px">
+
+                            <span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" placeholder="Enter End Date" onfocus="(this.type='date')" onblur="(this.type='text')"  class="form-control" name="EndDate">
+                        </div>
+
+
+                        <input type="hidden" id="GetRoomId" name="RoomId" value="0" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/styles/bootstrap4/popper.js"></script>
+    <script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Template/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Template/plugins/scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="~/Template/plugins/easing/easing.js"></script>
+    <script src="~/Template/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/Template/js/custom.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 1000
+        });
+
+        function GetRoomId(id) {
+            $("#GetRoomId").val(id);
+        }
+
+        $(function () {
+            $("#startdate").datepicker({ dateFormat: "dd-mm-yy" }).val()
+            $("#enddate").datepicker({ dateFormat: "dd-mm-yy" }).val()
+        });
+
+   
+        $("input").keyup(function () {
+            if ($("input").val() != "") {
+
+                $.ajax({
+                    type: "Get",
+                    url: "/Home/Search",
+                    data: { "key": $("input").val() }
+
+                }).done(function (data) {
+
+                    $("#list").html(data);
+                    //$("#list").append('<li><a href="/Home/PreviewRoom" ><span class="title">"' + data[0].HotelName + '"</span ></a ></li >');
+                    $.each(data, function (index) {
+                        $("#list").append(data[index])
+                        $("#list").append('<li class="form-control"><a href="/Home/GoToHotel/' + data[index].hotelId + '" ><span class="title" style="font-size:18px;">' + data[index].HotelName + '</span ></a ></li >');
+                    });
+
+
+
+                });
+
+            } else {
+                $("#list").html(" ");
+
+            }
+        });
+
+
+    </script>
+
+</body>
+</html>

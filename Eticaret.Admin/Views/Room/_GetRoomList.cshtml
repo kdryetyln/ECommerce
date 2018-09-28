@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Eticaret.Common.Models.RoomDtos.RoomDtos>
+
+
+<style>
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #e0b795;
+    }
+
+    .table-bordered td, .table-bordered th {
+        border: 1px solid #e0b795;
+    }
+
+    .table {
+        background-color: white;
+    }
+
+    .btn-danger {
+        background-color: #743f37;
+        border-color: #743f37;
+    }
+
+    .btn-primary {
+        background-color: #deaf68;
+        border-color: #deaf68;
+    }
+
+        .btn-primary:hover {
+            background-color: #87d9f7;
+            border-color: #87d9f7;
+        }
+
+    div, a {
+        color: #743f37;
+    }
+</style>
+
+<div class="portlet box purple" style="margin-top:1%;">
+    <div class="portlet-title">
+
+        <div class="tools">
+            <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
+            <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""> </a>
+            <a href="javascript:;" class="reload" data-original-title="" title=""> </a>
+            <a href="javascript:;" class="remove" data-original-title="" title=""> </a>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="table-scrollable">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Image</th>
+                        <th style="text-align:center">Room Type</th>
+                        <th style="text-align:center">Floor</th>
+                        <th style="text-align:center">Room Number</th>
+                        <th style="text-align:center">Price</th>
+                        <th style="text-align:center">Update</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (item.RoomImage != null)
+                                {<img src="~/Content/images/@item.RoomImage.Title" width="100px" height="100px" />}
+                                else
+                                {
+                                    <img src="~/Template/images/room_image.jpg" width="100px" height="100px" />
+                                }
+                            </td>
+                            <td style="text-align:center;padding:50px ">
+                                <span class="label label-sm label-success"> @item.RoomType.Name </span>
+                            </td>
+                            <td style="text-align:center;padding:50px "> @item.Room.Stock</td>
+                            <td style="text-align:center;padding:50px ">@item.Room.Id</td>
+                            <td style="text-align:center;padding:50px ">$@item.Room.Price</td>
+
+                            <td style="text-align:center;padding-top:45px ">
+                                <div class="row" style="width:113px">
+                                    <button onclick="GetId(@item.Room.Id)" class="btn btn-primary pull-left" style="margin-left:10px;margin-right:10px" data-toggle="modal" data-target="#myModalEdit">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+
+                                    <a href="/Room/DeleteRoom/@item.Room.Id" class="btn btn-danger pull-right" style="margin-right:10px">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

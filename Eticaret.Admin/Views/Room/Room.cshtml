@@ -1,0 +1,337 @@
+﻿@model IEnumerable<Hotel.Domain.Domains.RoomType>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travello</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travello template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/responsive.css">
+
+    <style>
+        a {
+            color: #b2b8bc;
+        }
+
+            a:hover {
+                color: #0056b3;
+            }
+
+        body {
+            background-image: url("/Template/images/room_image.jpg") !important;
+            height: 1000px !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            background-size: cover !important;
+        }
+
+        .input-group-addon {
+            color: #743f37 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <form action="/Room/AddRoomType" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body col-lg-12">
+                        @Html.Action("_SetRoomTypes")
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" style="color:#743f37 ;font:bold" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn login-button" style="background-color:#743f37  !important;color:ghostwhite">Add Room Type</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="myModalEdit" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm("UpdateRoom", "Room", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <form class="form-wrap" id="room" action="/Room/AddRoom" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-money fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" style="color:black" name="Price" placeholder="Enter the price" />
+                            </div>
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-list-ol fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" style="color:black" name="Stock" placeholder="Enter floor number" />
+                            </div>
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-check-square-o fa" aria-hidden="true"></i></span>
+                                <select id="areas" name="RoomTypeId" class="form-control" style="color:black">
+                                    <option>Select Room Type</option>
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value="@item.Id" name="AreaId">@item.Name</option>
+                                    }
+
+
+                                </select>
+                            </div>
+                            <label></label>
+                            <label></label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-image fa" aria-hidden="true"></i></span>
+
+                                <div class="fileinput fileinput-new  form-control" style="color:black" data-provides="fileinput">
+                                    <div>
+                                        <span class="btn default btn-file">
+                                            <span class="fileinput-new"> Select image </span>
+                                            <span class="fileinput-exists"> Change </span>
+                                            <input type="file" name="image">
+                                            <p class="help-block" style="margin-left:-55px"> jpeg, jpg, png </p>
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <label></label>
+                            <label><input type="hidden" id="IdRoom" name="Id" value="1"/></label>
+                            <div class="input-group">
+                                <button type="submit" class="btn login-button " style="background-color:#743f37  !important;color:ghostwhite;margin-left:370px">Add Room</button>
+                            </div>
+                        </form>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                            <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+                                <div class="logo"><a href="index.html">Travello</a></div>
+                                <nav class="main_nav">
+                                    <ul class="d-flex flex-row align-items-start justify-content-start">
+                                        <li><a href="/Home/Index">Home</a></li>
+                                        <li class="active"><a href="/Room/Room">Rooms</a></li>
+                                        <li><a href="#">Customers</a></li>
+                                        <li><a href="#">Campaigns</a></li>
+                                        <li><a href="#">Settings</a></li>
+                                        <li><a href="#">@Session["nameHotel"] (Logout)</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="hamburger ml-auto">
+                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_social d-flex flex-row align-items-center justify-content-start">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <!-- Home -->
+
+        <div class="home">
+
+            <div class="owl-carousel owl-theme home_slider">
+
+                <!-- Slide -->
+                <div class="owl-item">
+                    <div class="home_slider_content_container" style=" top: 20%;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="home_slider_content">
+                                        <div class="home_title"><h2 style="color:#906b4d">Add Room</h2></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="home_search">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_search_container" style="background: rgba(255,255,255,0.80);margin-top:-150px">
+
+                            <button class="home_search_button pull-right" style="background-color:#ae480b" data-toggle="modal" data-target="#myModal">Add Room Type</button>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="home_slider_content">
+
+                                        @using (Html.BeginForm("AddRoom", "Room", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                        {
+                                            <form class="form-wrap" id="room" action="/Room/AddRoom" method="post">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-money fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" style="color:black" name="Price" placeholder="Enter the price" />
+                                                </div>
+                                                <label></label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-list-ol fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" style="color:black" name="Stock" placeholder="Enter floor number" />
+                                                </div>
+                                                <label></label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-check-square-o fa" aria-hidden="true"></i></span>
+                                                    <select id="areas" name="RoomTypeId" class="form-control" style="color:black">
+                                                        <option>Select Room Type</option>
+                                                        @foreach (var item in Model)
+                                                        {
+                                                            <option value="@item.Id" name="AreaId">@item.Name</option>
+                                                        }
+
+
+                                                    </select>
+                                                </div>
+                                                <label></label>
+                                                <label></label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-image fa" aria-hidden="true"></i></span>
+
+                                                    <div class="fileinput fileinput-new  form-control" style="color:black" data-provides="fileinput">
+                                                        <div>
+                                                            <span class="btn default btn-file">
+                                                                <span class="fileinput-new"> Select image </span>
+                                                                <span class="fileinput-exists"> Change </span>
+                                                                <input type="file" name="image">
+                                                                <p class="help-block" style="margin-left:-55px"> jpeg, jpg, png </p>
+
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <label></label>
+                                                <label></label>
+                                                <div class="input-group">
+                                                    <button type="submit" class="btn login-button " style="background-color:#743f37  !important;color:ghostwhite;margin-left:370px">Add Room</button>
+                                                </div>
+                                            </form>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="home" style="height:117px">
+
+        <div class="owl-carousel owl-theme home_slider">
+
+            <!-- Slide -->
+            <div class="owl-item">
+                <div class="home_slider_content_container" style=" top: -20px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="home_slider_content">
+                                    <div class="home_title"><h2 style="color:#906b4d">Rooms</h2></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="home_search_container" style="background: rgba(255,255,255,0.80);margin-top:1350px;margin-left:120px;width:1290px">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="home_slider_content">
+                    @Html.Action("_GetRoomList")
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/styles/bootstrap4/popper.js"></script>
+    <script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Template/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Template/plugins/scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="~/Template/plugins/easing/easing.js"></script>
+    <script src="~/Template/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/Template/js/custom.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    $("#Id").val = $("GetId").attr("SectionId");
+        //});
+        function GetId(id) {
+            alert(id);
+            $("#IdRoom").val(id);
+        }
+    </script>
+</body>
+</html>
+

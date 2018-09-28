@@ -1,0 +1,47 @@
+﻿@model Hotel.Domain.Domains.RoomType
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-address-book fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" style="color:black" name="Name" placeholder="Enter Room Type Name" />
+        </div>
+        <label></label>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" style="color:black" name="PersonCount"  placeholder="Enter the number of rooms" />
+        </div>
+        <label></label>
+    </div>
+    <div class="col-lg-6">
+            <div style="width:184px;float:left">
+                <label>
+                    @Html.EditorFor(m => m.airConditioning) Air Conditioning</label>
+            </div>
+            <div style="width:184px;float:left">
+                <label>@Html.EditorFor(m => m.Bathroom) BathRoom</label>
+            </div>
+            <div style="width:184px;float:left">
+
+                <label>@Html.EditorFor(m => m.Fund) Hair Dryer</label>
+
+            </div>
+            <div style="width:184px;float:left">
+                <label>@Html.EditorFor(m => m.Jakuzi) Jakuzi</label>
+            </div>
+            <div style="width:184px;float:left">
+                <label>@Html.EditorFor(m => m.MiniBar) Mini Bar</label>
+            </div>
+            <div style="width:184px;float:left">
+                <label>@Html.EditorFor(m => m.Telephone) Telephone</label>
+            </div>
+            <div style="width:184px;float:left">
+                <label>@Html.EditorFor(m => m.TV) TV</label>
+            </div>
+            <div style="width:184px;float:left">
+                <label>@Html.EditorFor(m => m.Wifi) WIFİ</label>
+            </div>
+
+        </div>
+
+    </div>

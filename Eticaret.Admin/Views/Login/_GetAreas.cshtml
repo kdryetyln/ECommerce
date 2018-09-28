@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Hotel.Domain.Domains.Area>
+
+
+<head>
+
+    <!------ Include the above in your HEAD tag ---------->
+    <style>
+        .custom-select {
+            background-color: white;
+            background-size: 10% 50%;
+            color: #001231;
+            border-radius: 3px;
+            height: 40px;
+            width: 100%;
+            border: 0px;
+        }
+
+            .custom-select option, option {
+                background: #708694;
+                color: white;
+                border: 0px;
+                border-bottom: 1px solid #BDC3C7;
+                height: 40px;
+            }
+    </style>
+</head>
+<link rel="stylesheet" href="https://drive.google.com/open?id=1qAtZRT2B8hcjy8LD6DdksBfkDEkuG8qd" type="text/css" />
+
+<select id="areas" name="AreaId" class="custom-select">
+    <option>Select City</option>
+   
+    @foreach (var item in Model)
+    {        
+        <option value="@item.Id" name="AreaId">@item.Name</option>
+    }
+</select>
